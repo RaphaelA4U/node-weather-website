@@ -4,8 +4,11 @@ const forecast = require('./utils/forecast.js')
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
+const cors = require('cors')
 
 const app = express()
+
+app.use(cors())
 
 // Define paths for Express config
 const publicDirPath = path.join(__dirname, '../public')
@@ -70,6 +73,11 @@ app.get('/weather', (req, res) => {
             })
         })
     })
+})
+
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
 
 app.get('/products', (req, res) => {
