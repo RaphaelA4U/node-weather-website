@@ -1,0 +1,72 @@
+body {
+    background: lightskyblue;
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 32px;
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+footer {
+    color: #333333;
+    border-top: 1px solid #333333;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+header a {
+    border: 2px solid #333333;
+    background: #3270FF;
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.portrait {
+    width: 250px;
+}
+
+input {
+    border: 2px solid #333333;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+button {
+    cursor: pointer;
+    border: 2px solid #333333;
+    background: #5099FF;
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+button {
+    cursor: pointer;
+    border: 2px solid #333333;
+    background: #5099FF;
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+}
