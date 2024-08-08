@@ -10,7 +10,6 @@ const geocode = (address, callback) => {
         if (error) {
             callback('Geen verbinding met locatie-services.', undefined)
         } else if (!response.body || !response.body.features || response.body.features.length === 0) {
-            console.log('API Response:', response.body); // Log the API response for debugging
             callback('Locatie niet gevonden, probeer een andere locatie.', undefined)
         } else {
             const { center: [longitude, latitude], place_name: full_address } = response.body.features[0]
