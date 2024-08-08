@@ -7,6 +7,7 @@ const hbs = require('hbs')
 const cors = require('cors')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 app.use(cors())
 
@@ -75,11 +76,6 @@ app.get('/weather', (req, res) => {
     })
 })
 
-const port = process.env.PORT || 3001
-app.listen(port, () => {
-    console.log('Server is up on port ' + port)
-})
-
 app.get('/products', (req, res) => {
     if (!req.query.search) {
         return res.send({
@@ -106,6 +102,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
