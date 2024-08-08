@@ -58,7 +58,7 @@ app.get('/weather', (req, res) => {
             return res.send({ error })
         }
 
-        forecast(latitude, longitude, (error, { temp, feels_like, temp_min, temp_max, weather_description } = {}) => {
+        forecast(latitude, longitude, (error, { temp, feels_like, temp_min, temp_max, weather_description, sunrise, sunset } = {}) => {
             if (error) {
                 return res.send({ error })
             }
@@ -71,6 +71,8 @@ app.get('/weather', (req, res) => {
                 maximum_temperatuur: temp_max,
                 locatie: full_address,
                 adres: req.query.address,
+                sunrise: sunrise,
+                sunset: sunset,
             })
         })
     })

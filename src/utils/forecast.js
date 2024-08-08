@@ -14,9 +14,11 @@ const forecast = (latitude, longitude, callback) => {
         } else if (!body.weather || body.weather.length === 0) {
             callback('Weer informatie niet beschikbaar.', undefined)
         } else {
-            const weather_description = body.weather[0].description
             const { temp, feels_like, temp_min, temp_max } = body.main
-            callback(undefined, { temp, feels_like, temp_min, temp_max, weather_description })
+            const weather_description = body.weather[0].description
+            const sunrise = body.sys.sunrise
+            const sunset = body.sys.sunset
+            callback(undefined, { temp, feels_like, temp_min, temp_max, weather_description, sunrise, sunset })
         }
     })
 }
