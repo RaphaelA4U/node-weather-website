@@ -1,7 +1,10 @@
+require('dotenv').config()
+const FORECAST_API_KEY = process.env.FORECAST_API_KEY
+
 const request = require('postman-request')
 
 const forecast = (latitude, longitude, callback) => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=nl&appid=1e370d646d571431757e864c13163214&units=metric`
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=nl&appid=${FORECAST_API_KEY}&units=metric`
 
     request({ url, json: true }, (error, { body } = {}) => {
         if (error) {
