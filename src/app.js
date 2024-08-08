@@ -26,15 +26,15 @@ app.use(express.static(publicDirPath))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather',
+        title: 'Weer',
         name: 'Raphael Rustema',
     })
 })
 
-app.get('/about', (req, res) => {
-    res.render('about', {
-        title: 'About',
-        name: 'Raphael',
+app.get('/over', (req, res) => {
+    res.render('over', {
+        title: 'Over',
+        name: 'Raphael Rustema',
     })
 })
 
@@ -42,7 +42,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
         helpText: 'Hallo, dit is de hulp-pagina.',
-        name: 'Raphael',
+        name: 'Raphael Rustema',
     })
 })
 
