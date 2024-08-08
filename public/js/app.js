@@ -36,9 +36,9 @@ weatherForm.addEventListener('submit', (event) => {
                 msg1.textContent = ('')
 
                 msg2.textContent = ('Gevonden locatie: ' + data.locatie + '.')
-                msg3.textContent = ('Op deze locatie is het nu ' + data.temperatuur + ' graden.')
-                msg4.textContent = ('Het weer hier is nu ' + data.weer + ', met een gevoelstemperatuur van ' + data.gevoels_temperatuur + ' graden.')
-                msg5.textContent = ('Vandaag is het hier minimaal ' + data.minimum_temperatuur + ' graden, met een maximum van ' + data.maximum_temperatuur + ' graden.')
+                msg3.textContent = ('Op deze locatie is het nu ' + data.temperatuur.toFixed(1) + ' graden.')
+                msg4.textContent = ('Het weer hier is nu ' + data.weer + ', met een gevoelstemperatuur van ' + data.gevoels_temperatuur.toFixed(1) + ' graden.')
+                msg5.textContent = ('Vandaag is het hier minimaal ' + data.minimum_temperatuur.toFixed(1) + ' graden, met een maximum van ' + data.maximum_temperatuur.toFixed(1) + ' graden.')
                 
                 console.log('Sunrise:', data.sunrise);
                 console.log('Sunset:', data.sunset);
